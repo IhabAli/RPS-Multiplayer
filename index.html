@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors!</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div class='container'>
+  <!-- HEAD -->
+  <div class='headish'>
+    <h1>Rock Paper Scissors!</h1>
+  </div>
+  <!-- Reset everything -->
+    <button class="btn btn-success" id="resetButton"><br> Click Me To Reset EVERYTHING!</button>
+  <!-- awaiting opponent -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div id="player1Div">
+        <h2>Waiting for player 1</h2>
+      </div>
+
+      <div id="resultsDiv">
+        <h2>Scores</h2>
+      </div>
+
+      <div id="player2Div">
+        <h2>Waiting for Player 2</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <!-- HTML names entry -->
+      <div id="nameDiv">
+        <form class="form-inline" id="nameForm">
+          <p class="form-control-static blue" style="font-size:2.5em; font-weight: bolder;">Enter Your Name Here:</p>
+          <input class="form-control" id="nameInput">
+          <button type="submit" class="btn btn-primary" id="startGame">Begin!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-primary hide" id="chatDiv">
+        <div class="panel-heading"><small>online</small></div>
+        <div class="panel-body" id="chatBody" style="height: 300px">
+          <!-- Chat against opponent -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <form class="form-inline hide" id="chatForm" onSubmit="return false">
+        <p class="form-control-static blue">Chat with your opponent:</p>
+        <input class="form-control" id="chatInput">
+        <button type="button" class="btn btn-default" id="chatSubmit">Send!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>

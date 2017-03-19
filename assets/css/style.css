@@ -1,0 +1,125 @@
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: black;
+}
+p{
+  font: 5px;
+}
+#resetButton {
+  font-size: 2em;
+  background: darkgreen;
+  border: 5px double lightgreen;
+}
+
+#resetButton:hover {
+  padding: 1em;
+  color: black;
+  background: lightgreen;
+  border: 5px double green;
+}
+
+body {
+  background: url('../images/rps.jpg');
+  background-color: lightblue; 
+  font-family:  serif, cursive;
+}
+
+.headish {
+  padding: 1em;
+  background: lightgreen;
+  border: 3px double green;
+  color: #094D92;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+/*Divs*/
+
+#player1Div, #resultsDiv, #player2Div {
+  width: 30%;
+  height: 20em;
+  display: inline-block;
+  margin: .1em;
+  border: 3px double green;
+  margin-top: 4em;
+  position: relative;
+}
+
+
+/*Chat*/
+#chatDiv {
+  margin: 2em;
+
+}
+
+#nameDiv {
+  margin: 20px auto;
+  width: 100%;
+  display: inline-block;
+}
+
+#nameForm {
+  margin-left: 27%;
+  margin-top: 5%;
+}
+
+.me{
+  font-size: 20px;
+  margin: -4px;
+  border-right: 4px solid #60DF88 !important;
+  padding: 4px;
+  background-color: white;
+}
+
+.you{
+  font-size: 14px;
+  margin: -4px;
+  border-left: 3px solid rgb(255, 112, 0) !important;
+  padding: 5px;
+  padding-left:10px;
+  background-color: lightblue;
+}
+
+.blue {
+  color: green;
+}
+
+
+.topNameDiv {
+  width: 30%;
+  height: 20em;
+  margin: .1em;
+  border: 0.1em solid #1C1018;
+  margin-top: 4em;
+}
+
+
+#winLossP1Span {
+  color: darkgreen;
+  position: absolute;
+  bottom: 0;
+  right: 6em;
+  font-size: 2em;
+}
+
+#winLossP2Span {
+  color: #094D92;
+  position: absolute;
+  bottom: 0;
+  right: 6em;
+  font-size: 2em;
+}
+
+.btn-success {
+  margin: 5% 0 0 25%;
+  width: 50%;
+}
