@@ -1,74 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rock Paper Scissors!</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Rock Paper Scissors!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/cs.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="reset">
+    </head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
 </head>
-<body>
-<div class='container'>
-  <!-- HEAD -->
-  <div class='headish'>
-    <h1>Rock Paper Scissors!</h1>
-  </div>
-  <!-- Reset everything -->
-    <button class="btn btn-success" id="resetButton"><br> Click Me To Reset EVERYTHING!</button>
-  <!-- awaiting opponent -->
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <div id="player1Div">
-        <h2>Waiting for player 1</h2>
-      </div>
+<body scroll="auto">
+<table BORDER=0 style="height:200px;width:500px;text-align:center;font-size:30px" id="gam">
+ <tr>
+  <td width="33%">  </td><td rowspan=2 id="ww">  </td><td width="33%" >  </td>
+ </tr>
+ <tr>
+  <td id="g">  </td><td id="i">  </td>
+ </tr>
+</table>
+<table BORDER=1 style="border-collapse:collapse" cellpadding=0 >
+<p class="ok">
+   Player
+   vs Computer
+</p>
+ <tr>
+ </table>
+    <hr style="margin:30px">
+    <table BORDER=1 style="border-collapse:collapse" cellpadding=0 >
 
-      <div id="resultsDiv">
-        <h2>Scores</h2>
-      </div>
+   <td><input type="button" class="b" value="Paper" onclick="g(2)"></td>
+  <td><input type="button" class="b" value="Rock" onclick="g(0)"></td>
+  <td><input type="button" class="b" value="Scissors" onclick="g(1)"></td>
 
-      <div id="player2Div">
-        <h2>Waiting for Player 2</h2>
-      </div>
-    </div>
-  </div>
+ </tr>
+</table>
+<script type="text/javascript">
+    
+var p=['Rock','Scissors','Paper',['win','&#10004;'],['lose','&#9760;']]
 
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <!-- HTML names entry -->
-      <div id="nameDiv">
-        <form class="form-inline" id="nameForm">
-          <p class="form-control-static blue" style="font-size:2.5em; font-weight: bolder;">Enter Your Name Here:</p>
-          <input class="form-control" id="nameInput">
-          <button type="submit" class="btn btn-primary" id="startGame">Begin!</button>
-        </form>
-      </div>
-    </div>
-  </div>
+function g(n){ document.getElementById('g').innerHTML=p[n]; var cp=[0,1,2]
+    cp.sort(function(a,b){return Math.random()-0.5});
+    r=Math.floor(3*(Math.random()));
+    document.getElementById('i').innerHTML=p[cp[r]];r=cp[r];
+    if(r===n){w(1); return} 
+    else if((r===0 && n===1) || (r===1 && n==2) || (r==2 && n===0)){w(2)}
+    else{w(0)}
 
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-primary hide" id="chatDiv">
-        <div class="panel-heading"><small>online</small></div>
-        <div class="panel-body" id="chatBody" style="height: 300px">
-          <!-- Chat against opponent -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <form class="form-inline hide" id="chatForm" onSubmit="return false">
-        <p class="form-control-static blue">Chat with your opponent:</p>
-        <input class="form-control" id="chatInput">
-        <button type="button" class="btn btn-default" id="chatSubmit">Send!</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
-</body>
-</html>
+}
+function w(w){
+pf=document.getElementById('gam'); pftr=pf.getElementsByTagName('tr');pftd=pf.getElementsByTagName('td');
+    for(b=0;b<3;b++){pftd[b].innerHTML='&nbsp;'} w===1?pftd[w].innerHTML='tie':pftd[w].innerHTML='win'
+}
+</script>
+<script src="jquery-3.2.0.min.js"></script>
+<script src="assets/javascript/app.js" </script>
+</body></html>

@@ -1,0 +1,41 @@
+
+.s{
+  font-size:40px
+color:white;
+}
+.b{
+	font-size:40px;background-color:##FF4000;height:85px
+  font-color: white;
+}
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: black;
+}
+.ok{
+
+  font-size: 20
+}
+var {
+  font-color: white;
+}
+p{
+  font-size: 20px;
+  color: white;
+
+}
+body {
+  background: url('../images/rps.jpg');
+  background-color: lightblue; 
+  font-family:  serif, cursive;
+  background-size: 1500px;
+}
+
+img{
+  size: 20px;
+}
